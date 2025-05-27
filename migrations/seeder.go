@@ -10,5 +10,8 @@ func Seeder(db *gorm.DB) error {
 		return err
 	}
 
+	if err := seeds.BookSeeder(db); err != nil {
+		return err
+	}
 	return nil
 }
